@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class Edge
 {
-    private Node start;
-    private Node end;
-    private float length = 0;
-    public Edge(Node s, Node e, float l) {
+    public Node start { get; private set; }
+    public Node end { get; private set; }
+    public float length { get; private set; }
+    public int antPassed { get; private set; }
+    public float pheromone { get; private set; }
+    public Edge(Node s, Node e) {
         if (s == null) {
             s = new Node();
         }
@@ -16,19 +18,15 @@ public class Edge
         }
         start = s;
         end = e;
-        length = l;
+        length = Vector2.Distance(s.position, e.position);
         start.AddEdge(this);
+        pheromone = 1;
+        antPassed = 0;
     }
-    public Node GetEndNode()
-    {
-        return end;
+    public void SetPheromone(float p) {
+        pheromone = p;
     }
-    public Node GetStartNode()
-    {
-        return start;
-    }
-    public float GetLength()
-    {
-        return length;
+    public void Passed() {
+        antPassed++;
     }
 }

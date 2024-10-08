@@ -1,10 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
 public class Graph
 {
-    private List<Node> nodes;
+    public List<Node> nodes { get; private set; }
 
     public Graph()
     {
@@ -16,8 +16,8 @@ public class Graph
         nodes.Add(node);
     }
 
-    public void AddEdge(Node start, Node end, float length)
+    public void AddEdge(Node start, Node end)
     {
-        Edge edge = new Edge(start, end, length);
+        Edge edge = new Edge(start, end);
     }
 }
