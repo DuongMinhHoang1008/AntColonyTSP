@@ -11,7 +11,7 @@ public class Node
         Random rand = new Random();
         edges = new List<Edge>();
         position = new Vector2(
-            (float) rand.NextDouble() * 16 - 8,
+            (float) rand.NextDouble() * 7 - 7,
             (float) rand.NextDouble() * 8 - 4
         );
     }

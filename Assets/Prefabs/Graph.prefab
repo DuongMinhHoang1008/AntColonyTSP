@@ -46,4 +46,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NodePref: {fileID: 5358995416410138766, guid: c05e197e61e026f47854499172036946, type: 3}
   AntPref: {fileID: 6723064696010587785, guid: 540e341ac3236bb47b0595be93f45141, type: 3}
+  LinePref: {fileID: 2327131322894681290, guid: f1ae79e2a9b866f4f8b9a752f6547950, type: 3}
+  twoWay: 0
+  speed: 0
   numNodes: 0
+  numAnts: 0
+  pheromoneRating: 0
+  edgeRating: 0
+  pheromoneEvaporation: 0
+  repeatTime: 0

@@ -25,9 +25,7 @@ public class VisualizedAnt : MonoBehaviour
                 float distance = ant.FinishMove();
                 
                 if (distance > 0) {
-                    VisualizedGraph.instance.UpdateNewRecord(distance);
-                    VisualizedGraph.instance.SpawnNewAnt();
-                    Destroy(gameObject);
+                    VisualizedGraph.instance.AntFinish(distance, ant.way, ant);
                     return;
                 }
 

@@ -20,7 +20,7 @@ public class Edge
         end = e;
         length = Vector2.Distance(s.position, e.position);
         start.AddEdge(this);
-        pheromone = 1;
+        pheromone = 0.1f;
         antPassed = 0;
     }
     public void SetPheromone(float p) {
@@ -28,5 +28,8 @@ public class Edge
     }
     public void Passed() {
         antPassed++;
+    }
+    public void ResetAntPassed() {
+        antPassed = 0;
     }
 }

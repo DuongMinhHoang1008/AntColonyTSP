@@ -1,9 +1,5 @@
 using UnityEngine;
 using System.Collections;
-#if UNITY_EDITOR
-using UnityEditor;
-#endif
-// adapted from http://wiki.unity3d.com/index.php/DrawArrow 
 
 
 public enum ArrowType
